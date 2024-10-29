@@ -129,3 +129,12 @@ typedArr[1] = 60422;
 //______________________________________________________________________________________
 
 // Buffer instances are also JavaScript Uint8Array and TypedArray instances
+
+// That “waiting area” is the buffer! It is a small physical location in your computer,
+// usually in the RAM, where data are temporally gathered, wait, and are eventually sent
+//  out for processing during streaming.
+
+//  Node.js can’t control the speed or time of data arrival, the speed of the stream.
+//  It only can decide when it’s time to send out the data.If it’s not yet time,
+// Node.js will put them in the buffer — the “waiting area” — a small location in the
+// RAM, until it’s time to send them out for processing.
