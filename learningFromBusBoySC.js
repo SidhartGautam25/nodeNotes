@@ -21,3 +21,10 @@
 
 // When a data event callback in a readable stream runs, it takes the chunk of
 // data out of the readable stream’s internal buffer and provides it to the callback
+
+// The push method returns a boolean:
+// true: This indicates that the internal buffer still has space available,
+// so the stream can safely accept more data without backpressure.
+// false: This indicates that the internal buffer is full, signaling backpressure,
+//  and the producer should stop pushing data until the buffer is
+// drained(i.e., until the consumer reads more data).
