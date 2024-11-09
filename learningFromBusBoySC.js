@@ -28,3 +28,7 @@
 // false: This indicates that the internal buffer is full, signaling backpressure,
 //  and the producer should stop pushing data until the buffer is
 // drained(i.e., until the consumer reads more data).
+
+// Yes, that’s correct! Chunks of data in the buffer are transferred to the callback
+//  only when the callback function is actively called and not when it's
+// simply scheduled
