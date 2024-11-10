@@ -35,3 +35,11 @@
 
 // When push(chunk) returns false in a Node.js stream, it does push the chunk into
 //  the internal buffer first and then returns false to signal backpressure.
+
+// you can pass the encoding and callback function to _write using write() method
+
+// callback to _write(): This function is a critical part of flow control within streams.
+//  It ensures that the next chunk will only be written once the current chunk
+//  has finished processing, effectively enabling backpressure management.
+//  Not calling the callback would block further writes, while calling it allows
+//   the stream to continue.
