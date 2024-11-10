@@ -32,3 +32,6 @@
 // Chunks of data in the buffer are transferred to the callback
 //  only when the callback function is actively called and not when it's
 // simply scheduled
+
+// When push(chunk) returns false in a Node.js stream, it does push the chunk into
+//  the internal buffer first and then returns false to signal backpressure.
